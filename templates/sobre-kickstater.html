@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="h-100">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto de Data Visualization</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body class="d-flex flex-column h-100">
+    <header class="navbar navbar-expand-lg bg-dark flex-shrink-0" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="/static/img/kicks-logo-mini.png" alt="Kickstarter" height="24"
+                    class="d-inline-block align-text-top me-2">
+                Projeto de Data Visualization
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </header>
+
+    <div class="container-fluid flex-grow-1">
+        <div class="row d-flex h-100">
+            <aside class="col-md-3 col-lg-2 d-md-block bg-kicks sidebar collapse" id="sidebarMenu">
+                <div class="position-sticky pt-3">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link" href=" {{ url_for('index') }} ">
+                                Página inicial
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href=" {{ url_for('kickstater') }} ">
+                                Sobre o Kickstarter
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href=" {{ url_for('dataset') }} ">
+                                Sobre o dataset
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href=" {{ url_for('dashboard') }} ">
+                                Análise de dados
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+                <div
+                    class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                    <h1 class="h2">Sobre o Kickstater</h1>
+                    <a class="btn btn-dark" href="https://www.kickstarter.com/" target="_blank">Conheça o Kickstater</a>
+                </div>
+                <div class="row align-items-center">
+                    <div class="col-12 mb-2">
+                        <p>O Kickstarter é uma plataforma de crowdfunding global, lançada em 2009, que permite a
+                            criadores e empreendedores arrecadarem fundos para seus projetos por meio de doações
+                            de um grande número de pessoas. Em vez de buscar investidores tradicionais ou
+                            empréstimos bancários, os criadores apresentam suas ideias – que podem ser de
+                            diversas áreas como filmes, jogos, música, arte, tecnologia e design – diretamente
+                            ao público.</p>
+                        <p>Os apoiadores contribuem com quantias de dinheiro em troca de
+                            recompensas exclusivas, que variam de acordo com o valor doado. Essas recompensas
+                            podem incluir cópias do produto final, edições limitadas, experiências únicas ou até
+                            mesmo um simples agradecimento. O modelo do Kickstarter é "tudo ou nada": se um
+                            projeto não atinge sua meta de financiamento dentro do prazo estipulado, nenhum
+                            dinheiro é cobrado dos apoiadores. Isso garante que os criadores tenham os recursos
+                            necessários para levar o projeto adiante.</p>
+                        <p>O Kickstarter democratiza o financiamento de projetos, permitindo que
+                            ideias inovadoras e criativas saiam do papel com o apoio da comunidade, e não apenas
+                            de grandes investidores.</p>
+                    </div>
+                    <div class="row mb-2 text-center">
+                        <div class="col-6">
+                            <img class="mt-4 mb-2" style="max-width: 90%; height: auto;"
+                                src="{{ url_for('static', filename='img/kicks-website-home.png') }}"
+                                alt="Website do Kickstater">
+                            <p>Website do Kickstater</p>
+                        </div>
+                        <div class="col-6">
+                            <img class="mt-4 mb-2" style="max-width: 90%; height: auto;"
+                                src="{{ url_for('static', filename='img/kicks-website-fund.png') }}"
+                                alt="Website do Kickstater">
+                            <p>Website do Kickstater</p>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <footer class="footer mt-auto py-3 bg-dark flex-shrink-0" data-bs-theme="dark">
+        <div class="container text-center">
+            <span class="text-muted">Projeto de Data Visualization - 2025</span>
+        </div>
+    </footer>
+</body>
+
+</html>
