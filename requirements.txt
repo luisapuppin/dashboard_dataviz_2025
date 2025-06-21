@@ -1,0 +1,6 @@
+flask
+flask_migrate
+flask_sqlalchemy
+pandas
+plotly
+sqlalchemy
