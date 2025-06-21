@@ -49,7 +49,7 @@ def index():
 
 @app.route('/upload', methods=['POST'])
 def upload_file():
-    from importar_dados import importar_dados_csv
+    from funcoes import importar_dados_csv
 
     if 'file' not in request.files:
         flash(f'Nenhum arquivo selecionado', 'warning')
